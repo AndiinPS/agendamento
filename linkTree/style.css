@@ -8,7 +8,11 @@ body {
 
 #logo img {
 
-    height: 300px;  
+    height: 300px;
+    width: 300px; 
+    border-radius: 50%; 
+    border: solid 4px white; 
+    margin-top: 50pt;
     
 }
 
@@ -36,7 +40,7 @@ h1 {
 .links a {
 
     background-color: #4a90e2; 
-    display: block;
+    display: flex;
     margin: 20px auto;
     padding: 15px 20px;
     width: 80%; /* Ajusta para telas pequenas */
@@ -48,8 +52,16 @@ h1 {
     font-family: 'Roboto', sans-serif;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    border: solid 2px whitesmoke;
     
+}
 
+.links a:hover {
+
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    background-color: black; /* Altera a cor no hover */
 
 }
