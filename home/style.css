@@ -1,17 +1,58 @@
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+}
+
+body {
+    font-family: Arial, sans-serif;
 }
 
 header {
-
     background-image: url(./img/barber.jpg);
     background-position: center;
     background-size: cover;
-    min-height:400px;
+    min-height: 400px;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
 
+.logo img {
+    height: 250px;
+    width: 250px; 
+    border-radius: 50%; 
+    border: solid 4px white; 
+    margin-top: 50pt;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: red;
+    border-radius: 5px;
 }
