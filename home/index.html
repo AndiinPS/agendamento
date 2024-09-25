@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Loja</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Site Loja</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <div class="navBox">
+        <div class="navbox">
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="#home">Início</a></li>
@@ -19,33 +21,58 @@
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
-            
             <div class="header-content container">
                 <div class="header-title">
-                    <h1>Sua Loja</h1>
+                    <h1>
+                        Sua Loja
+                    </h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit sed temporibus dolorum beatae nisi sapiente repellat minus sit sequi odit facilis fugit, laudantium aliquam esse molestias perspiciatis laborum aspernatur!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis voluptates repudiandae et
+                        ipsum
+                        nam quae quidem, dolore iure error quis?
                     </p>
                 </div>
-                
                 <div class="logo">
                     <img src="./img/logo.jpg" alt="logo">
                 </div>
-            </div>    
+            </div>
         </div>
-        
-        
-            
-        
     </header>
+
     
-    <section>
-        
+    <section id="services">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="card-container" id="serviceCards">
+            <!-- Os cards serão carregados dinamicamente aqui -->
+            <div class="card">
+                <img src="path-to-image.jpg" alt="Corte de cabelo">
+                <h3>Corte de cabelo</h3>
+                <p>Descrição rápida do serviço</p>
+                <div class="card-price">R$50,00</div>
+                <button class="card-schedule" onclick="openModal()">Agendar</button>
+            </div>
+        </div>
     </section>
+    
+    <!-- Modal para agendamento -->
+    <div class="modal" id="scheduleModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Agendar Serviço</h2>
+            <p>Preencha suas informações para agendar.</p>
+            <!-- Coloque seu formulário de agendamento aqui -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
 
     <footer>
-        
+       
     </footer>
 
+    <script src="script.js"></script>
+
 </body>
+
 </html>
