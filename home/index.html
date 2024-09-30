@@ -40,7 +40,7 @@
     </header>
 
     
-    <section id="services">
+    <section class="services">
         <h2 class="section-title">Serviços</h2>
         <div class="card-container" id="serviceCards">
             
@@ -52,17 +52,58 @@
                 <button class="card-schedule" onclick="openModal()">Agendar</button>
             </div>
         </div>
-    </section>
-    
-    
-    <div class="modal" id="scheduleModal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Agendar Serviço</h2>
-            <p>Preencha suas informações para agendar.</p>
-            
+        
+        
+        <div class="modal" id="scheduleModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Agendar Serviço</h2>
+                <p>Preencha suas informações para agendar.</p>
+                
+            </div>
         </div>
-    </div>
+        
+    </section>
+
+    <section class="container">
+        <div class="contact-map">
+        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2599.017558622644!2d-43.53026921748262!3d-22.89248973834242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9be104c0c834f7%3A0xd87b043ae6f698d4!2sCondominio%20Residencial%20Colinas%20De%20Campo%20Grande!5e0!3m2!1spt-BR!2sbr!4v1727395089823!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <div id="endereco">
+                <p>
+
+                    My house , 11806 , Vasconcelos - RJ
+
+                </p>
+
+                <p>
+
+                    <b>Tel: 21 9646-81384</b>
+
+                </p>
+
+            </div>
+        
+        </div>
+
+        <div class="contact-form">
+
+
+
+
+            <div>
+
+                <button onclick="enviar()">Enviar</button>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
     
     
     <footer>

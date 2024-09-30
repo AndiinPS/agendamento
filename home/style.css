@@ -271,17 +271,34 @@ header .logo {
 
 
 header,
-section {
+.services {
 
     margin: 0;
     padding: 0;
 
 }
 
-section {
+.services {
 
     padding: 20px;
-    background-color: var(--blue); 
+     
 
 }
 
+.contact-map {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-form {
+
+    display: flex;
+
+}
+
+#endereco {
+
+    display: flex;
+}
