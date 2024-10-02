@@ -1,41 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetchServices();
-});
-
-function fetchServices() {
-    fetch('fetch_services.php')
-        .then(response => response.json())
-        .then(data => {
-            const cardContainer = document.getElementById('serviceCards');
-            data.forEach(service => {
-                const card = document.createElement('div');
-                card.classList.add('card');
-                card.innerHTML = `
-                    <img src="${service.image_url}" alt="${service.service_name}">
-                    <h3>${service.service_name}</h3>
-                    <p>${service.description}</p>
-                    <div class="card-price">Preço: R$${service.price}</div>
-                    <button class="card-schedule">Agendar</button>
-                `;
-                cardContainer.appendChild(card);
-            });
-        })
-        .catch(error => console.error('Erro ao buscar serviços:', error));
-}
-
-function openModal() {
-    document.getElementById('scheduleModal').style.display = 'flex';
-}
 
 
-function closeModal() {
-    document.getElementById('scheduleModal').style.display = 'none';
-}
+
+const adminUser = "admin"
+const adminPassword = "1234"  
 
 
-window.onclick = function(event) {
-    const modal = document.getElementById('scheduleModal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
+function realizarLogin() {
+   
+    const username = document.getElementById('username').value
+    const password = document.getElementById('password').value
+
+    
+    if (username === adminUser && password === adminPassword) {
+        
+        document.getElementById('admin-login').style.display = 'none'
+        document.getElementById('admin-section').style.display = 'block'
+    } else {
+        
+        document.getElementById('login-error').style.display = 'block'
     }
-};
+}
+
+
+function atualizarCard() {
+    const cardNumber = document.getElementById('card-number').value
+    const cardTitle = document.getElementById('card-title').value
+    const cardDescription = document.getElementById('card-description').value
+    const cardImageURL = document.getElementById('card-image').value
+
+    const cardIndex = cardNumber - 1
+    const cards = document.querySelectorAll('.card')
+
+    if (cardIndex >= 0 && cardIndex < cards.length) {
+        const card = cards[cardIndex]
+        card.querySelector('h3').textContent = cardTitle
+        card.querySelector('p').textContent = cardDescription
+        card.querySelector('img').src = cardImageURL
+
+        alert(`Card ${cardNumber} atualizado com sucesso!`)
+    } else {
+        alert('Número do card inválido!')
+    }
+}
+
+
+document.getElementById('login-button').addEventListener('click', realizarLogin)
+
+
+document.getElementById('update-card').addEventListener('click', atualizarCard)
