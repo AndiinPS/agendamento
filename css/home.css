@@ -219,4 +219,32 @@ p {
     transform: scale(1.05);
 }
 
+/* Estilização do Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .btn-admin {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+footer .btn-admin:hover {
+    background-color: #0056b3;
+}
+
 
