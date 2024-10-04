@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,49 +8,50 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/adm.css">
 </head>
+
 <body>
-   
-   <section id="admin-login" class="login-section">
-    <h2>Área do Administrador</h2>
-    <form id="login-form">
-        <div class="form-group">
-            <label for="username">Nome de Usuário</label>
-            <input type="text" id="username" placeholder="Usuário" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Senha</label>
-            <input type="password" id="password" placeholder="Senha" required>
-        </div>
-        <button type="button" id="login-button">Login</button>
-    </form>
-    <p id="login-error" style="color: red; display: none;">Nome de usuário ou senha incorretos!</p>
-</section>
+
+    <section id="admin-login" class="login-section">
+        <h2>Área do Administrador</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" placeholder="Usuário" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Senha" required>
+            </div>
+            <button type="button" id="login-button">Login</button>
+        </form>
+        <p id="login-error" style="color: red; display: none;">Nome de usuário ou senha incorretos!</p>
+    </section>
 
 
-<section id="admin-section" style="display: none;">
-    <h2>Administração de Cards</h2>
-    <form id="card-form">
-        <div class="form-group">
-            <label for="card-number">Número do Card</label>
-            <input type="number" id="card-number" min="1" max="3" required>
-        </div>
-        <div class="form-group">
-            <label for="card-title">Título</label>
-            <input type="text" id="card-title" placeholder="Título do Card" required>
-        </div>
-        <div class="form-group">
-            <label for="card-description">Descrição</label>
-            <textarea id="card-description" placeholder="Descrição do Card" required></textarea>
-        </div>
-        <div class="form-group">
-            <label for="card-image">URL da Imagem</label>
-            <input type="url" id="card-image" placeholder="URL da Imagem" required>
-        </div>
-        <button type="button" id="update-card">Atualizar Card</button>
-    </form>
-</section>
+    <section class="container" id="admin-section" style="display: none;">
+        <h2>Administração de Cards</h2>
+        <form id="card-form">
+            <div class="form-group">
+                <label for="card-number">Número do Card</label>
+                <input type="number" id="card-number" min="1" max="4" required>
+            </div>
+            <div class="form-group">
+                <label for="card-title">Título</label>
+                <input type="text" id="card-title" placeholder="Título do Card" required>
+            </div>
+            <div class="form-group">
+                <label for="card-description">Descrição</label>
+                <textarea id="card-description" placeholder="Descrição do Card" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="card-image">URL da Imagem</label>
+                <input type="url" id="card-image" placeholder="URL da Imagem" required>
+            </div>
+            <button type="button" id="update-card">Atualizar Card</button>
+        </form>
+    </section>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
 
+</html>
