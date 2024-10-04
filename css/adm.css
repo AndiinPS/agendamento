@@ -54,9 +54,8 @@
 #admin-section {
     background-color: #333;
     padding: 20px;
-    border-radius: 8px;
-    margin: 50px 0;
     color: var(--white);
+    align-items: center;
 }
 
 #admin-section h2 {
