@@ -151,74 +151,283 @@ p {
     
 }
 
-.cards {
-    margin: auto;
-    padding: 20px;
-}
-
-.cards-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: var(--white);
-}
-
+/* Estilo do contêiner de cards */
 .card-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 10px;
+    margin-top: 20px;
 }
 
+/* Estilo para os cards */
 .card {
     background-color: #222;
-    width: 300px;
+    color: #fff;
     padding: 20px;
+    border: 1px solid #444;
     border-radius: 8px;
+    width: 250px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, background-color 0.3s;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
 
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .card img {
     width: 100%;
-    height: 150px;
-    object-fit: contain;
-    border-radius: 4px;
-    
-}
-
-.card h3 {
-    font-size: 24px;
-    color: var(--white);
-    margin: 15px 0;
-}
-
-.card p {
-    font-size: 16px;
-    color: var(--white);
-    line-height: 1.6;
+    height: auto;
+    border-radius: 8px;
 }
 
 .btn-card {
-    background-color: var(--yellow);
-    color: var(--black);
+    background-color: #ff7043;
+    color: white;
     border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 4px;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .btn-card:hover {
-    background-color: #f0c30f;
+    background-color: #ff5722;
 }
 
-
-.card:hover {
+/* Estilo para o formulário de administração */
+#admin-section {
     background-color: #333;
-    transform: scale(1.05);
+    color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff7043;
+    outline: none;
+}
+
+button#update-card {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button#update-card:hover {
+    background-color: #ff5722;
 }
 
 
+/* Container principal do agendamento */
+.agendamento-container {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Altura total da tela */
+    background-image: url(/img/barber.jpg); /* Defina o caminho para sua imagem */
+    background-size: cover; /* Ajuste para cobrir todo o espaço */
+    background-position: center;
+    
+}
+
+/* Sobreposição de gradiente */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Texto de agendamento */
+.texto-agendamento {
+    padding: 20px;
+    color: #fff;
+    max-width: 500px;
+}
+
+.texto-agendamento p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Botão de agendamento */
+.btn-agendamento {
+    padding: 15px 30px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Define a posição como absoluta */
+    bottom: 40px; /* Espaçamento do botão em relação à parte inferior */
+    right: 40px; /* Espaçamento do botão em relação à parte direita */
+}
+
+.btn-agendamento:hover {
+    background-color: #0056b3;
+}
+
+.comentarios-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.comentario {
+    max-width: 300px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.img-placeholder img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.remove-btn {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.add-comment {
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.add-comment input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-comment button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Container da propaganda */
+.propaganda-container {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Altura da área de propaganda */
+    background-image: url('caminho/para/sua/imagem.png'); /* Defina o caminho para a imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo */
+}
+
+/* Conteúdo do texto */
+.conteudo {
+    padding: 40px;
+    max-width: 600px; /* Largura máxima do texto */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para destacar o texto */
+    color: #fff; /* Cor do texto */
+}
+
+.conteudo h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.conteudo p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+/* Estilo para o Footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px; /* Espaçamento entre os links */
+}
+
+.footer-links a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #ccc; /* Cor dos links */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--yellow); /* Cor dos links ao passar o mouse */
+}
+
+.footer-credit {
+    font-size: 0.9rem; /* Tamanho da fonte do crédito */
+}
+
+.footer-credit p {
+    margin: 0; /* Remove margem */
+    text-align: right;
+}
