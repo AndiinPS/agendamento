@@ -11,27 +11,42 @@
 
 <body>
 
+    <header>
+        <div id="navbar-component"></div>
+    </header>
+
     <div class="navbox">
         <nav class="navbar">
-            <!-- Logo da página -->
+            
             <div class="logo" id="logo">
                 <img src="./img/logo.jpg" alt="logo">
             </div>
-
-            <!-- Menu Hamburguer (inicialmente oculto) -->
+            
             <div class="hamburger-menu" id="hamburger-menu" style="display: none;">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
-            <!-- Nome do usuário -->
+            <div class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#services">Serviços</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="#" id="user-name"></a></li>
             </ul>
+            
+
+            
         </nav>
 
-        <!-- Menu Dropdown (oculto por padrão) -->
+        
         <ul class="dropdown-menu" id="dropdown-menu" style="display: none;">
             <li><a href="#profile">Perfil</a></li>
             <li><a href="#settings">Configurações</a></li>
@@ -55,7 +70,7 @@
         <p id="login-error" style="color: red; display: none;">Nome de usuário ou senha incorretos!</p>
     </section>
 
-    <script src="script.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 // Dados de login pré-definidos para teste
-const adminUser = "admin"
+const adminUser = "Anderson"
 const adminPassword = "1234"
 
 // Função para realizar login
