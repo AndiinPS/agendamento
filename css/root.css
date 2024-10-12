@@ -4,8 +4,8 @@
   --white: #ffffff;
   --shadow: rgba(0, 0, 0, 0.5);
   --font-size: 14pt;
-  --font-primary: "nunito";
-  --font-secondary: "roboto";
+  --font-primary: "nunito, sans-serif";
+  --font-secondary: "roboto, sans-serif";
 }
 
 .container {

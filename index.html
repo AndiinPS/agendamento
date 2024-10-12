@@ -8,19 +8,15 @@
     <title>Site Loja</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/home.css">
+    <script src="./js/main.js" defer></script>
 </head>
 
 <body>
 
     <header>
+      <div id="navbar-component"></div>
+
         <div class="navbox">
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="login.html" target="_blank">Login</a></li>
-                    <li><a href="cadastro.html" target="_blank">Cadastro</a>
-                </ul>
-            </nav>
             <div class="header-content container">
                 <div class="header-title">
                     <h1>
@@ -40,39 +36,9 @@
     </header>
 
 
-    <section class="cards-container bg-black">
+    <section class="cards-container bg-black" id="services">
         <h2 class="cards-title">Nossos Serviços</h2>
         <div class="card-container">
-            <div class="card">
-                <img src="./img/barber.jpg" alt="Serviço 1">
-                <h3>Serviço 1</h3>
-                <p>Descrição do serviço 1.</p>
-                <button class="btn-card">Saiba Mais</button>
-            </div>
-            <div class="card">
-                <img src="./img/barber.jpg" alt="Serviço 1">
-                <h3>Serviço 1</h3>
-                <p>Descrição do serviço 1.</p>
-                <button class="btn-card">Saiba Mais</button>
-            </div>
-            <div class="card">
-                <img src="./img/barber.jpg" alt="Serviço 1">
-                <h3>Serviço 1</h3>
-                <p>Descrição do serviço 1.</p>
-                <button class="btn-card">Saiba Mais</button>
-            </div>
-            <div class="card">
-                <img src="./img/barber.jpg" alt="Serviço 1">
-                <h3>Serviço 1</h3>
-                <p>Descrição do serviço 1.</p>
-                <button class="btn-card">Saiba Mais</button>
-            </div>
-            <div class="card">
-                <img src="./img/barber.jpg" alt="Serviço 1">
-                <h3>Serviço 1</h3>
-                <p>Descrição do serviço 1.</p>
-                <button class="btn-card">Saiba Mais</button>
-            </div>
             <div class="card">
                 <img src="./img/barber.jpg" alt="Serviço 1">
                 <h3>Serviço 1</h3>
@@ -128,7 +94,7 @@
     </section>
 
 
-    <section class="bg-black contact-container">
+    <section class="bg-black contact-container" id="contact">
         <div class="contact">
             <div class="contact-map">
 
@@ -156,8 +122,6 @@
             </div>
 
             <div class="contact-form">
-
-
 
                 <form>
 
@@ -190,7 +154,6 @@
                 </form>
 
 
-
                 <div class="form-group right">
 
                     <button onclick="enviar()">Enviar</button>
@@ -201,8 +164,6 @@
         </div>
 
     </section>
-
-    
 
     <footer>
         <section class="footer-container">
@@ -217,7 +178,7 @@
         </section>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
 

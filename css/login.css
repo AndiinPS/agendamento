@@ -51,7 +51,7 @@
     background-color: #f0c30f;
 }
 
-/* Estilo da barra de navegação */
+
 .navbar {
     width: 100%;
     display: flex;
@@ -89,7 +89,7 @@
     width: 100px;
     border-radius: 50%;
     border: solid 2px var(--white);
-    cursor: pointer;
+    
 }
 
 .navbar.menu-active .logo img {

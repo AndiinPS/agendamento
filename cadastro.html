@@ -11,18 +11,29 @@
 
 <body>
 
+    <header>
+        <div id="navbar-component"></div>
+    </header>
     <div class="navbox">
         <nav class="navbar">
+
             <div class="logo" id="logo">
                 <img src="./img/logo.jpg" alt="logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="login.html">Login</a></li>
-            </ul>
+
+            <div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 
-    <!-- Seção do formulário de cadastro -->
+
     <section id="user-registration" class="registration-section">
         <h2>Cadastro de Usuário</h2>
         <form id="registration-form">
@@ -72,10 +83,10 @@
 
             <button type="button" id="register-button">Cadastrar</button>
         </form>
-        <div id="message-area" style="display: none; margin-top: 10px;"></div> <!-- Área para mensagens -->
+        <div id="message-area" style="display: none; margin-top: 10px;"></div>
     </section>
 
-    <script src="cadastro.js"></script>
+    <script src="./js/cadastro.js"></script>
 </body>
 
 </html>
