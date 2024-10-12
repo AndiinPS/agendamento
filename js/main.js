@@ -22,34 +22,17 @@ cardContent()
 
 function cardContent() {
     const element = document.getElementById('card-content')
-    // Criar um novo card HTML
-    const Card = ` 
-    <div class="card-container">
+
+    const cards = `
+    
         <div class="card">
-            <img src="./img/barber.jpg" alt="Serviço 1">
-            <h3>Serviço 1</h3>
+            <img src="./img/barber.jpg" alt="Servico1">
+            <h3>Serviços 1</h3>
             <p>Descrição do serviço 1.</p>
             <button class="btn-card">Saiba Mais</button>
         </div>
-    </div>`
-
-    Card.classList.add('card')``
-
-    Card.innerHTML = `
-        <img src="${newCardImage}" alt="${newCardTitle}">
-        <h3>${newCardTitle}</h3>
-        <p>${newCardDescription}</p>
-        <button class="btn-card">Saiba Mais</button>
-    `
-
-    // Adicionar o novo card à seção de serviços na index.html
-    const cardContainer = document.querySelector('.card-container')
-    cardContainer.appendChild(newCard)
-
-    alert('Novo card adicionado com sucesso!')
-
-    // Limpar os campos do formulário
-    document.getElementById('new-card-title').value = ''
-    document.getElementById('new-card-description').value = ''
-    document.getElementById('new-card-image').value = ''
+      `
+    
+    element.innerHTML = cards
+    
 }
