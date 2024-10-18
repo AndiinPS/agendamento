@@ -42,23 +42,29 @@
     
     </header>
 
-    <section id="admin-login" class="login-section">
-        <h2>Login</h2>
-        <form id="login-form">
+    <section  class="form-acess">
+        
+        <form action="">
             <div class="form-group">
-                <label for="username">Email</label>
+                <label for="username">E-mail</label>
+
                 <input type="email" id="email" placeholder="email@example.com" autofocus>
             </div>
             <div class="form-group">
                 <label for="password">Senha</label>
                 <input type="password" id="password" placeholder="Password" >
             </div>
-            <div class="form-group">
-                <label for="remember-me">Remember me</label>
+            <div class="form-group-inline">
                 <input type="checkbox" id="remember-me"> 
+                <label for="remember-me">Remember me</label>
             </div>
             <button type="button" id="login-button">Sign in</button>
+            
+            <p>New around here? <a href="cadastro.html">Sign up</a></p>
+            <p><a href="">Forgot password?</a></p>
+            <p id="login-error" style="color: red; display: none;">Nome de usuário ou senha incorretos!</p>
         </form>
+
 
         <p>New around here? <a href="cadastro.html">Sign up</a></p>
         <p><a href="">Forgot password?</a></p>
