@@ -17,7 +17,7 @@
     border-radius: 8px;
     background-color: var(--shadow);
     padding: 20px;
-    
+    text-align: center;
 
 }
 
@@ -53,6 +53,7 @@ button#login-button:hover {
 p a {
     color: #007bff;
     text-decoration: none;
+    
 }
 
 .form-acess form p {
