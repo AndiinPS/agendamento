@@ -10,7 +10,7 @@ function navBarComponent() {
                 <li><a href="index.html#services">Serviços</a></li>
                 <li><a href="index.html#contact">Contato</a></li>
                 <li><a href="login.html">Login</a></li> 
-            </ul>
+             </ul>
         </nav>`
 
     element.innerHTML = navbar
