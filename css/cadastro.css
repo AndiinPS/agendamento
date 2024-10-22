@@ -1,3 +1,5 @@
+@import "./form.css";
+
 /* Estilo para a seção de cadastro */
 .registration-section {
     background-color: var(--shadow);
@@ -7,37 +9,11 @@
     margin: 50px auto;
     text-align: center;
     color: var(--white);
+    border: solid 3px var(--yellow);
 }
 
 .registration-section h2 {
     margin-bottom: 20px;
-}
-
-#registration-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#registration-form .form-group {
-    margin: 10px 0;
-    width: 100%;
-}
-
-#registration-form label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#registration-form input,
-#registration-form select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: none;
-    margin-bottom: 15px;
 }
 
 #register-button {
@@ -58,39 +34,4 @@
 #registration-error {
     margin-top: 20px;
     font-size: 16px;
-}
-
-.logo img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: solid 4px var(--white);
-    
-}
-
-.navbox {
-    background-color: var(--shadow);
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--white);
-    height: 100%;
-    min-height: 400px;
-}
-
-.header-title,
-header .logo {
-    margin: 50px 25px;
-}
-
-.header-title {
-    font-size: 24px;
-    max-width: 400px;
-}
-
-.header-title h1 {
-    font-size: 36px;
 }
