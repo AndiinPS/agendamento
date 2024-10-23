@@ -1,37 +1,31 @@
 @import "./form.css";
 
 /* Estilo para a seção de cadastro */
-.registration-section {
-    background-color: var(--shadow);
-    padding: 20px;
+ .registration-section {
+   
+    padding: 10px;
     border-radius: 8px;
-    width: 350px;
-    margin: 50px auto;
+    margin: 100px auto;
     text-align: center;
-    color: var(--white);
+    
     border: solid 3px var(--yellow);
+    
 }
 
-.registration-section h2 {
+.registration-section h2 { 
     margin-bottom: 20px;
 }
 
-#register-button {
-    background-color: var(--yellow);
-    color: var(--black);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+
 
 #register-button:hover {
     background-color: var(--white);
+    color: var(--black);
 }
 
-/* Mensagens de sucesso ou erro */
+
 #registration-success,
 #registration-error {
     margin-top: 20px;
     font-size: 16px;
-}
+} 
