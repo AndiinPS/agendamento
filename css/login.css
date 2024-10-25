@@ -1,12 +1,16 @@
 @import "./form.css";
 
 .form-acess {
+   
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
+
 }
+
 #login-form {
+   
     width: 100%; 
     max-width: 300px; 
     border: solid 3px var(--yellow);
@@ -15,10 +19,11 @@
     background-color: var(--shadow);
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+   
 }
 
 button#login-button {
+    
     width: 100%;
     padding: 10px;
     border: none;
@@ -28,43 +33,56 @@ button#login-button {
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+
 }
 
 button#login-button:hover {
+    
     background-color: var(--white);
+
 }
 
-
 .login-section p {
+    
     margin-top: 15px;
     font-size: 12px;
     color: var(--white);
+
 }
 
 #login-error {
+    
     color: red;
     margin-top: 10px;
-}
 
-
-p a {
-    color: #007bff;
-    text-decoration: none;
 }
 
 p a:hover {
+    
     text-decoration: underline; 
+
 }
 
 h2 {
+    
     color: var(--white);
     margin-bottom: 20px; 
+
 }
 
 .form-check {
+    
     display: flex;
     min-height: 1.5rem;
     margin-bottom: .125rem;
     flex-direction: row-reverse;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
+
 }
+
+.form-control:focus {
+
+    box-shadow: 0 0 0 5px var(--yellow);
+    
+}
+    
