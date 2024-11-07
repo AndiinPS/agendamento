@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     validaEmail();
     validaTelefone();
     validaPassword();
+    comparaSenha();
     validateRequired();
 });
 
@@ -34,7 +35,7 @@ function validaEmail() {
     element.addEventListener('keyup', (e) => {
         const value = e.target.value;
         let error = ''
-        const regexEmail = (/^[a-z0-9]+\@[a-z]+\.([a-z]{3})+$/g)
+        const regexEmail = (/^[a-z0-9_.=-]+@[a-zA-Z0-9-]+\.([a-zA-Z0-9-.]{3})+$/g)
 
         if (!regexEmail.test(value)) {
 
@@ -76,20 +77,42 @@ function validaPassword() {
     const message = document.querySelector("#senhaHelp");
     element.addEventListener('keyup', (e) => {
         const value = e.target.value;
+        let error = ''
+        const regexSenha = (/^[A-Za-z\d@$!%*?&]{8,}$/g)
+ 
 
-        if (value.lenght < 8) {
+        if (!regexSenha.test(value)) {
 
-            message.innerHTML = "Minimo de 8 caracteres"
-
-        } else {
-
-            message.innerHTML = ''
-
+            error = '<span class="text-danger">Senha inválido!</span>'
+            
         }
-
-
+        
+        message.innerHTML = error
+        
+     
     })
 
+}
+
+function comparaSenha() {
+
+    const senhaInput = document.querySelector("#senhaInput");
+    const confirmaSenhaInput = document.querySelector("#confirmasenhaInput");
+    const confirmaSenhaMessage = document.querySelector("#confiSenhaHelp");
+    confirmaSenhaInput.addEventListener('keyup', comparaSenha);
+    
+    const senha = senhaInput.value
+    const confirma = confirmaSenhaInput.value
+    let error = ''
+    
+    if (senha !== confirma) {
+        
+        error = '<span class="text-danger">As senhas não coincidem.</span>'
+        
+    }
+    
+    message.innerHTML = error
+    
 }
 
 function validateRequired() {
