@@ -2,7 +2,7 @@ import { validaNome,validaEmail,validaTelefone,validaPassword,comparaSenha,valid
 
 import { navBarComponentTemplate } from './../components/nav.component/nav.component.js'
 
-import { } from 
+import { cardComponent } from './../components/cards.component/cards.component.js'
 
 navBarComponentTemplate();
 validaNome();
