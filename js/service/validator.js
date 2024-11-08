@@ -1,16 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-    validaNome();
-    validaEmail();
-    validaTelefone();
-    validaPassword();
-    comparaSenha();
-    validateRequired();
-});
-
-function validaNome() {
+export function validaNome() {
 
     const element = document.querySelector("#nomeInput");
     const message = document.querySelector("#nomeHelp");
+    if (!element) return
     element.addEventListener('blur', (e) => {
         const value = e.target.value;
         let error = ''
@@ -28,10 +20,11 @@ function validaNome() {
 
 }
 
-function validaEmail() {
+export function validaEmail() {
 
     const element = document.querySelector("#emailInput");
     const message = document.querySelector("#emailHelp");
+    if (!element) return
     element.addEventListener('keyup', (e) => {
         const value = e.target.value;
         let error = ''
@@ -49,10 +42,11 @@ function validaEmail() {
 
 }
 
-function validaTelefone() {
+export function validaTelefone() {
 
     const element = document.querySelector("#telefoneInput");
     const message = document.querySelector("#telHelp");
+    if (!element) return
     element.addEventListener('keyup', (e) => {
         const value = e.target.value;
         let error = ''
@@ -71,10 +65,11 @@ function validaTelefone() {
 
 }
 
-function validaPassword() {
+export function validaPassword() {
 
     const element = document.querySelector("#senhaInput");
     const message = document.querySelector("#senhaHelp");
+    if (!element) return
     element.addEventListener('keyup', (e) => {
         const value = e.target.value;
         let error = ''
@@ -83,7 +78,7 @@ function validaPassword() {
 
         if (!regexSenha.test(value)) {
 
-            error = '<span class="text-danger">Senha inválido!</span>'
+            error = '<span class="text-danger">Senha inválida!</span>'
             
         }
         
@@ -94,11 +89,11 @@ function validaPassword() {
 
 }
 
-function comparaSenha() {
+export function comparaSenha() {
 
     const senhaInput = document.querySelector("#senhaInput");
     const confirmaSenhaInput = document.querySelector("#confirmasenhaInput");
-    const confirmaSenhaMessage = document.querySelector("#confiSenhaHelp");
+    const message = document.querySelector("#confirmaHelp");
     confirmaSenhaInput.addEventListener('keyup', comparaSenha);
     
     const senha = senhaInput.value
@@ -115,9 +110,9 @@ function comparaSenha() {
     
 }
 
-function validateRequired() {
+export function validateRequired() {
     const elements = document.querySelectorAll("[required]")
-    const message = document.querySelector("#nameHelp")
+    if (!element) return
     console.log(elements)
 }
 

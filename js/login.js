@@ -36,35 +36,3 @@ function realizarLogin() {
 
 document.getElementById('login-button').addEventListener('click', realizarLogin)
 
-document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector(".navbar")
-    const hamburgerMenu = document.getElementById("hamburger-menu")
-    const dropdownMenu = document.getElementById("dropdown-menu")
-    const logoElement = document.getElementById("logo")
-    const userNameDisplay = document.getElementById("user-name")
-    const logoutButton = document.getElementById("logout")
-
-    // Lógica para abrir e fechar o menu dropdown ao clicar no menu hamburguer
-    hamburgerMenu.addEventListener("click", function () {
-        // Alterna a classe menu-active para abrir e fechar o menu
-        navbar.classList.toggle("menu-active")
-        // Alterna a visibilidade do dropdown
-        if (navbar.classList.contains("menu-active")) {
-            dropdownMenu.style.display = "block"
-        } else {
-            dropdownMenu.style.display = "none"
-        }
-    })
-
-    // Lógica para logout (adiciona uma funcionalidade ao botão de logout)
-    logoutButton.addEventListener("click", function () {
-        // Reseta a interface para o estado inicial de login
-        document.getElementById('admin-login').style.display = 'block'
-        navbar.classList.remove("logged-in", "menu-active")
-        logoElement.style.display = 'block' // Mostra a logo novamente
-        hamburgerMenu.style.display = 'none'  // Oculta o menu hamburguer
-        dropdownMenu.style.display = 'none'   // Oculta o dropdown
-        userNameDisplay.style.display = 'none' // Oculta o nome do usuário
-        document.getElementById('login-form').reset(); // Limpa os campos do formulário
-    })
-})
