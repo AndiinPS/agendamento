@@ -1,54 +1,38 @@
-export function cardComponent() {
+export async function cardComponent() {
+  const localTemplate = "components/cards.component/cards.component.html";
+  const localStyle = "components/cards.component/cards.component.css";
+  const element = document.getElementById("#services");
+  if (!element) return;
 
-    const localTemplate = 'components/cards.component/cards.component.html';
-    const localStyle = 'components/cards.component/cards.component.css';
-    const element = document.getElementById('#services'); 
-    if (!element) return;
+  // Carrega o template externo
+  let template = "";
+  fetch(localTemplate)
+    .then((res) => res.text())
+    .then((template) => {
+      template = data;
+    });
 
-    // Carrega o template externo
-    fetch(localTemplate)
-        .then((res) => res.text())
-        .then((template) => {
-            
-            element.innerHTML = template;
+  const cardContainer = document.querySelector("#card-content");
+}
 
-            
-            const cardData = [
-                {
-                    title: 'Corte de Cabelo',
-                    description: 'Corte de cabelo profissional feito por especialistas.',
-                    imageUrl: 'img\logo.jpg'
-                },
-                {
-                    title: 'Barba',
-                    description: 'Aparação e estilização da barba com precisão.',
-                    imageUrl: 'img\logo.jpg'
-                },
-                {
-                    title: 'Massagem Capilar',
-                    description: 'Relaxe com uma massagem capilar revitalizante.',
-                    imageUrl: 'img\logo.jpg'
-                }
-            ];
+//Montar de colaboradores
+const cards = await getCards();
+for (const cadr of cards) {
+  let copytTemplate = template;
+  copytTemplate = copytTemplate
+    .replace("{{title}}", card.title)
+    .replace("{{description}}", card.description)
+    .replace("{{imageUrl}}", card.imageUrl);
+  element.innerHTML += copytTemplate;
+}
 
-            const cardContainer = document.getElementById('card-content');
-            
-            
-            cardData.forEach(card => {
-                const cardHTML = `
-                    <div class="card">
-                        <img src="${card.imageUrl}" class="card-img-top" alt="${card.title}">
-                        <div class="card-body">
-                            <h5 class="card-title">${card.title}</h5>
-                            <p class="card-text">${card.description}</p>
-                        </div>
-                    </div>
-                `;
-                
-                cardContainer.innerHTML += cardHTML;
-            });
-        })
-        .catch((error) => {
-            console.error("Erro ao carregar os cards", error);
-        });
+async function getCard() {
+  const card = {};
+  let result;
+  await fetch("mocks/cards.json")
+    .then((res) => res.json())
+    .then((data) => {
+      result = data;
+    });
+  return result;
 }
