@@ -1,24 +1,38 @@
+export async function cardComponent() {
+  const localTemplate = "components/cards.component/cards.component.html";
+  const localStyle = "components/cards.component/cards.component.css";
+  const element = document.getElementById("#services");
+  if (!element) return;
 
-export function cardComponent() {
+  // Carrega o template externo
+  let template = "";
+  fetch(localTemplate)
+    .then((res) => res.text())
+    .then((template) => {
+      template = data;
+    });
 
-    const localTemplate = 'components\cards.component\cards.component.html'
-    const localStyle = 'components\cards.component\cards.component.css'
-    const element = document.getElementById('card-component')
-    if (!element) return
-    element.innerHTML = ''
-    element.innerHTML += `<link rel="stylesheet" href="${localStyle}">` 
-    
-    fetch(localTemplate)
-        .then((res) => res.text())
-        .then((nav) => {
+  const cardContainer = document.querySelector("#card-content");
+}
 
-            element.innerHTML += nav
+//Montar de colaboradores
+const cards = await getCards();
+for (const cadr of cards) {
+  let copytTemplate = template;
+  copytTemplate = copytTemplate
+    .replace("{{title}}", card.title)
+    .replace("{{description}}", card.description)
+    .replace("{{imageUrl}}", card.imageUrl);
+  element.innerHTML += copytTemplate;
+}
 
-        })
-        .catch((error) => {
-
-            console.error("Erro o carregar a navBar",error)
-
-        })
-
+async function getCard() {
+  const card = {};
+  let result;
+  await fetch("mocks/cards.json")
+    .then((res) => res.json())
+    .then((data) => {
+      result = data;
+    });
+  return result;
 }
