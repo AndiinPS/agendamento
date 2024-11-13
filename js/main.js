@@ -12,7 +12,7 @@ validaPassword();
 comparaSenha();
 validateRequired();
 cardComponent()
-
+getCards()
 
 
 function getElement(elementSelector) {
