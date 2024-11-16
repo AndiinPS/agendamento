@@ -2,17 +2,17 @@ import { validaNome,validaEmail,validaTelefone,validaPassword,comparaSenha,valid
 
 import { navBarComponentTemplate } from './../components/nav.component/nav.component.js'
 
-import { cardComponent } from './../components/cards.component/cards.component.js'
+import { cardComponent } from './../components/cards.component/card.component.js'
 
 navBarComponentTemplate();
+cardComponent();
 validaNome();
 validaEmail();
 validaTelefone();
 validaPassword();
 comparaSenha();
 validateRequired();
-cardComponent()
-getCards()
+validarCPF();
 
 
 function getElement(elementSelector) {

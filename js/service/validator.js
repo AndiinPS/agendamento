@@ -116,6 +116,27 @@ export function validateRequired() {
     console.log(elements)
 }
 
+// export function validarCPF() {
+   
+//     const element = document.querySelector("documentoInput");
+//     const message = document.querySelector("documentHelp");
+//     if (!element) return
+    
+//     var cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+  
+    
+  
+//     if (!cpfRegex.test(cpfInput)) {
+//       documentHelp.textContent = "Por favor, insira um CPF válido no formato XXX.XXX.XXX-XX.";
+//       documentHelp.style.color = "red";
+//     } else {
+//       documentHelp.textContent = "CPF válido!";
+//       documentHelp.style.color = "green";
+  
+      
+//     }
+//   }
+  
 
 
 
