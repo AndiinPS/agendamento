@@ -15,6 +15,7 @@
     crossorigin="anonymous" defer></script>
   
   <script src="./js/main.js" type="module" defer></script>
+  <script src="./js/aplication/cadastro.js" type="module" defer></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 
   <section class="registration-section col-md-5 col-lg-4 mx-auto bg-dark text-white">
     <h2>Cadastrar</h2>
-    <form id="registration-form" enctype="multipart/form-data">
+    <form id="registrationForm" enctype="multipart/form-data">
       <div class="form-group mb-3">
         <label for="nomeInput">Nome</label>
         <input type="text" id="nomeInput" name="nome" class="form-control" placeholder="Seu nome completo" required autofocus>
@@ -96,8 +97,8 @@
         <input type="text" id="documentoInput" name="documento" class="form-control" placeholder="Documento de identificação" required>
         <div id="documentHelp" class="form-text"></div>
       </div>
-      <button type="reset" id="register-button" class="btn btn-warning w-50 my-3">Cancelar</button>
-      <button type="submit" id="register-button" class="btn btn-warning w-50">Cadastrar</button>
+      <button type="reset" id="registerbutton" class="btn btn-warning w-50 my-3">Cancelar</button>
+      <button type="button" id="registerButton" class="btn btn-warning w-50">Cadastrar</button>
     </form>
     <div id="message-area" class="alert alert-success" role="alert" style="display: none;">
       Cadastro realizado com sucesso!

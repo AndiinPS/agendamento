@@ -1,11 +1,11 @@
 [
   {
-    "title": "Corte de Cabelo",
+    "title": "Cortes de Cabelo",
     "description": "Corte de cabelo profissional feito por especialistas.",
     "imageUrl": "./img/logo.jpg"
   },
   {
-    "title": "Barba",
+    "title": "Barbas",
     "description": "Aparação e estilização da barba com precisão.",
     "imageUrl": "./img/logo.jpg"
   },
