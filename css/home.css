@@ -222,27 +222,6 @@ p {
     color: var(--white);
 }
 
-/* Estilo para o Footer */
-.footer-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
-    background-color: #111; /* Fundo preto */
-    color: #fff; /* Texto branco */
-    width: 100%;
-    
-}
-
-.footer-credit {
-    font-size: 0.9rem; /* Tamanho da fonte do crédito */
-}
-
-.footer-credit p {
-    margin: 0; /* Remove margem */
-    text-align: right;
-}
-
 @media (max-width:768px) {
     .header-content {
 
