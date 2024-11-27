@@ -5,20 +5,18 @@
     align-items: center;
     padding: 20px;
     background-color: #111;
-    /* Fundo preto */
     color: var(--white);
-    /* Texto branco */
     width: 100%;
 
 }
 
 .footer-credit {
     font-size: 0.9rem;
-    /* Tamanho da fonte do crédito */
+    
 }
 
 .footer-credit p {
     margin: 0;
-    /* Remove margem */
+    
     
 }
