@@ -42,7 +42,7 @@ function getFormClient() {
 
 function registrationForm() {
 
-  const registerButton = document.querySelector('#registrationForm')
+  const registerButton = document.querySelector('#registerButton')
   registerButton.addEventListener("click", () => {
     const client = getFormClient()
     console.log(client)
