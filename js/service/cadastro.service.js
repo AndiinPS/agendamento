@@ -1,4 +1,4 @@
-import { setPerson } from "../infra/cadastro.repository.js"
+import { setPerson } from "./../infra/cadastro.repository.js";
 
 export const cadastroService = {
 
@@ -14,7 +14,7 @@ function add(client) {
             alert("sucesso")
         })
         .catch(error => {
-            console.log("error", res)
+            console.log("error: ", error)
             alert("Erro")
         })
 
