@@ -1,4 +1,4 @@
-import { collection, addDoc, db, query, where, getDocs } from "./firebase.js";
+import { collection, addDoc, db, query, where, getDocs } from "./firebase.js"
 
 
 export async function addClient(client) {
